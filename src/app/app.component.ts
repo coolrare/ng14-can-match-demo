@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng14-can-match-demo';
+  betaUser() {
+    localStorage.setItem('beta-user', '1');
+    document.location.reload();
+  }
+
+  normalUser() {
+    localStorage.removeItem('beta-user');
+    document.location.reload();
+  }
 }
